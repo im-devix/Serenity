@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Quotes | Premium Inspiration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Nunito:wght@300;400;600;700&family=Raleway:wght@300;400;500;600&family=Merriweather:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600&family=Ubuntu:wght@300;400;500&family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color Schemes */
+            --theme-1-primary: #5F6F94;
+            --theme-1-secondary: #97D2EC;
+            --theme-1-accent: #F3AA60;
+            --theme-1-bg: #FEFBF6;
+            --theme-1-card: white;
+            --theme-1-text: #2D3436;
+            
+            --theme-2-primary: #6D9886;
+            --theme-2-secondary: #D9CAB3;
+            --theme-2-accent: #F2D388;
+            --theme-2-bg: #F7F7F7;
+            --theme-2-card: white;
+            --theme-2-text: #212121;
+            
+            --theme-3-primary: #9A86A4;
+            --theme-3-secondary: #C1A3A3;
+            --theme-3-accent: #F4BFBF;
+            --theme-3-bg: #FFF5F5;
+            --theme-3-card: white;
+            --theme-3-text: #3A3845;
+            
+            --theme-4-primary: #FD8A8A;
+            --theme-4-secondary: #F1F7B5;
+            --theme-4-accent: #A8D1D1;
+            --theme-4-bg: #F9F9F9;
+            --theme-4-card: white;
+            --theme-4-text: #3A3845;
+            
+            --theme-5-primary: #5B4B8A;
+            --theme-5-secondary: #8A7BB7;
+            --theme-5-accent: #D4B483;
+            --theme-5-bg: #F5F3FF;
+            --theme-5-card: white;
+            --theme-5-text: #2E2A3E;
+            
+            --theme-6-primary: #2C5E1A;
+            --theme-6-secondary: #6B8F4E;
+            --theme-6-accent: #B5D99C;
+            --theme-6-bg: #F8FFF3;
+            --theme-6-card: white;
+            --theme-6-text: #1A2A12;
+
+            --theme-7-primary: #355C7D;
+            --theme-7-secondary: #6C5B7B;
+            --theme-7-accent: #C06C84;
+            --theme-7-bg: #F8F9FA;
+            --theme-7-card: white;
+            --theme-7-text: #2A363B;
+
+            --theme-8-primary: #264653;
+            --theme-8-secondary: #2A9D8F;
+            --theme-8-accent: #E9C46A;
+            --theme-8-bg: #FDFFFC;
+            --theme-8-card: white;
+            --theme-8-text: #1D3557;
+
+            --theme-9-primary: #6A0572;
+            --theme-9-secondary: #9A0F98;
+            --theme-9-accent: #EA638C;
+            --theme-9-bg: #FFFAFB;
+            --theme-9-card: white;
+            --theme-9-text: #30343F;
+
+            --theme-10-primary: #114B5F;
+            --theme-10-secondary: #1A936F;
+            --theme-10-accent: #88D498;
+            --theme-10-bg: #F3E9D2;
+            --theme-10-card: white;
+            --theme-10-text: #0A2342;
+            
+            /* Current Theme */
+            --current-primary: var(--theme-1-primary);
+            --current-secondary: var(--theme-1-secondary);
+            --current-accent: var(--theme-1-accent);
+            --current-bg: var(--theme-1-bg);
+            --current-card: var(--theme-1-card);
+            --current-text: var(--theme-1-text);
+            --current-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+            --base-font-size: 1rem;
+            --font-scale: 1;
+            --font-weight: 400;
+            --font-style: normal;
+            
+            /* Layout */
+            --menu-width: 280px;
+            --border-radius: 12px;
+            --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+            
+            /* Other Colors */
+            --muted: #7D7C7C;
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --danger: #F44336;
+            --info: #2196F3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: var(--font-weight);
+            font-style: var(--font-style);
+            background: var(--current-bg);
+            color: var(--current-text);
+            min-height: 100vh;
+            line-height: 1.6;
+            font-size: calc(var(--base-font-size) * var(--font-scale));
+            overflow-x: hidden;
+            transition: var(--transition);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: var(--current-card);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            height: 70px;
+            transition: var(--transition);
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--current-primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .menu-toggle {
+            font-size: 1.4rem;
+            color: var(--current-primary);
+            cursor: pointer;
+            transition: var(--transition);
+            background: none;
+            border: none;
+            z-index: 1001;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(95, 111, 148, 0.1);
+            color: var(--current-accent);
+        }
+
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: var(--menu-width);
+            height: 100vh;
+            background: var(--current-card);
+            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+            padding-top: 80px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        .menu-item {
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--current-text);
+            text-decoration: none;
+            transition: var(--transition);
+            border-left: 4px solid transparent;
+            font-size: 0.95rem;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background: rgba(95, 111, 148, 0.05);
+            border-left: 4px solid var(--current-primary);
+            color: var(--current-primary);
+        }
+
+        .menu-item i {
+            width: 24px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 5.5rem 1.2rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            min-height: calc(100vh - 70px);
+            transition: var(--transition);
+        }
+
+        .page-title {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--current-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Quote Card */
+        .quote-card {
+            background: var(--current-card);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            box-shadow: var(--current-shadow);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--current-primary), var(--current-secondary));
+        }
+
+        .quote-text {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: var(--current-text);
+            line-height: 1.5;
+        }
+
+        .quote-author {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            color: var(--current-primary);
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        .quote-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(0, 0, 0, 0.1);
+            font-size: 0.85rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--current-secondary);
+            color: white;
+            padding: 0.25rem 0.7rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* Controls */
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        button {
+            background: var(--current-primary);
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-height: 44px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button.secondary {
+            background: var(--current-card);
+            color: var(--current-primary);
+            border: 1px solid var(--current-primary);
+            box-shadow: none;
+        }
+
+        button.secondary:hover {
+            background: var(--current-primary);
+            color: white;
+        }
+
+        button.accent {
+            background: var(--current-accent);
+        }
+
+        button.success {
+            background: var(--success);
+        }
+
+        button.warning {
+            background: var(--warning);
+        }
+
+        button.danger {
+            background: var(--danger);
+        }
+
+        button.info {
+            background: var(--info);
+        }
+
+        /* Categories Grid */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .category-card {
+            background: var(--current-card);
+            border-radius: var(--border-radius);
+            padding: 1.5rem 1rem;
+            box-shadow: var(--current-shadow);
+            transition: var(--transition);
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid rgba(0,0,0,0.05);
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            color: var(--current-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .category-name {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            font-family: var(--font-heading);
+        }
+
+        .category-count {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        /* Settings */
+        .setting-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .setting-title {
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: var(--current-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .setting-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+        }
+
+        .theme-option {
+            height: 50px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-option::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+        }
+
+        .theme-option.active {
+            border-color: var(--current-primary);
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .theme-option .theme-name {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            color: white;
+            font-size: 0.6rem;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        select, input[type="range"] {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #ddd;
+            background: var(--current-card);
+            color: var(--current-text);
+            font-family: var(--font-body);
+            transition: var(--transition);
+        }
+
+        select:focus, input[type="range"]:focus {
+            outline: none;
+            border-color: var(--current-primary);
+            box-shadow: 0 0 0 2px rgba(95, 111, 148, 0.2);
+        }
+
+        /* Range Slider */
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .range-value {
+            min-width: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            height: 6px;
+            background: #ddd;
+            border-radius: 3px;
+            flex-grow: 1;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            background: var(--current-primary);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: var(--transition);
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--current-primary);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .toggle-label {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Text Style Buttons */
+        .text-style-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .text-style-button {
+            padding: 0.5rem;
+            border-radius: 4px;
+            background: var(--current-card);
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .text-style-button.active {
+            background: var(--current-primary);
+            color: white;
+            border-color: var(--current-primary);
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Loading */
+        .loading {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--muted);
+        }
+
+        .empty-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Search */
+        .search-container {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 2.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #ddd;
+            background: var(--current-card);
+            color: var(--current-text);
+            font-family: var(--font-body);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--current-primary);
+            box-shadow: 0 0 0 2px rgba(95, 111, 148, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+        }
+
+        /* Author Page */
+        .authors-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.8rem;
+        }
+
+        .author-card {
+            background: var(--current-card);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            box-shadow: var(--current-shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--current-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .author-name {
+            font-weight: 500;
+            flex-grow: 1;
+        }
+
+        .author-quote-count {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        /* About Page */
+        .about-card {
+            background: var(--current-card);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            box-shadow: var(--current-shadow);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section h3 {
+            color: var(--current-primary);
+            margin-bottom: 0.8rem;
+            font-family: var(--font-heading);
+        }
+
+        .feature-list {
+            list-style-type: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .feature-list li i {
+            color: var(--current-primary);
+            margin-top: 0.2rem;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .controls {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .authors-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .setting-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .header {
+                padding: 1rem;
+            }
+            
+            .main-content {
+                padding: 5rem 1rem 1.5rem;
+            }
+            
+            .quote-card {
+                padding: 1.5rem 1.2rem;
+            }
+            
+            .quote-text {
+                font-size: 1.3rem;
+            }
+            
+            .authors-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --current-bg: #1A1A2E;
+            --current-card: #16213E;
+            --current-text: #E6E6E6;
+            --current-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            --muted: #A0A0A0;
+        }
+
+        .dark-mode .quote-card, 
+        .dark-mode .about-card,
+        .dark-mode .author-card,
+        .dark-mode .category-card {
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .dark-mode .quote-meta {
+            border-top: 1px dashed rgba(255,255,255,0.1);
+        }
+
+        .dark-mode select,
+        .dark-mode .search-input {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .dark-mode .search-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .dark-mode .search-icon {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .dark-mode .text-style-button {
+            border-color: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo" id="logo">Serenity</div>
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="side-menu">
+        <a href="#" class="menu-item active" data-page="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="menu-item" data-page="favorites">
+            <i class="fas fa-heart"></i>
+            <span>Favorites</span>
+        </a>
+        <a href="#" class="menu-item" data-page="categories">
+            <i class="fas fa-tags"></i>
+            <span>Categories</span>
+        </a>
+        <a href="#" class="menu-item" data-page="authors">
+            <i class="fas fa-user-edit"></i>
+            <span>Authors</span>
+        </a>
+        <a href="#" class="menu-item" data-page="settings">
+            <i class="fas fa-cog"></i>
+            <span>Settings</span>
+        </a>
+        <a href="#" class="menu-item" data-page="about">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </a>
+        <div class="menu-item" style="margin-top: auto; padding-bottom: 2rem;">
+            <i class="fas fa-moon"></i>
+            <span>Dark Mode</span>
+            <label class="toggle-switch" style="margin-left: auto;">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <div class="quote-card">
+            <div class="quote-text">Loading quotes...</div>
+            <div class="quote-author">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>Please wait</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideMenu = document.getElementById('side-menu');
+        const overlay = document.getElementById('overlay');
+        const mainContent = document.getElementById('main-content');
+        const menuItems = document.querySelectorAll('.menu-item');
+        const logo = document.getElementById('logo');
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        // State
+        let currentPage = 'home';
+        let quotes = [];
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        let currentTheme = localStorage.getItem('theme') || 'theme-1';
+        let currentFont = localStorage.getItem('font') || 'poppins';
+        let currentFontSize = localStorage.getItem('fontSize') || 'medium';
+        let darkMode = localStorage.getItem('darkMode') === 'true' || false;
+        let fontWeight = localStorage.getItem('fontWeight') || '400';
+        let fontStyle = localStorage.getItem('fontStyle') || 'normal';
+
+        // Categories
+        const categories = [
+            { id: 'motivation', name: 'Motivation', icon: 'fas fa-fire' },
+            { id: 'inspiration', name: 'Inspiration', icon: 'fas fa-lightbulb' },
+            { id: 'love', name: 'Love', icon: 'fas fa-heart' },
+            { id: 'life', name: 'Life', icon: 'fas fa-leaf' },
+            { id: 'success', name: 'Success', icon: 'fas fa-trophy' },
+            { id: 'wisdom', name: 'Wisdom', icon: 'fas fa-brain' },
+            { id: 'friendship', name: 'Friendship', icon: 'fas fa-user-friends' },
+            { id: 'humor', name: 'Humor', icon: 'fas fa-laugh-squint' },
+            { id: 'spiritual', name: 'Spiritual', icon: 'fas fa-pray' },
+            { id: 'business', name: 'Business', icon: 'fas fa-briefcase' },
+            { id: 'creativity', name: 'Creativity', icon: 'fas fa-paint-brush' },
+            { id: 'education', name: 'Education', icon: 'fas fa-graduation-cap' },
+            { id: 'family', name: 'Family', icon: 'fas fa-home' },
+            { id: 'health', name: 'Health', icon: 'fas fa-heartbeat' },
+            { id: 'leadership', name: 'Leadership', icon: 'fas fa-chess-king' },
+            { id: 'nature', name: 'Nature', icon: 'fas fa-tree' },
+            { id: 'philosophy', name: 'Philosophy', icon: 'fas fa-atom' },
+            { id: 'science', name: 'Science', icon: 'fas fa-flask' },
+            { id: 'sports', name: 'Sports', icon: 'fas fa-running' },
+            { id: 'time', name: 'Time', icon: 'fas fa-clock' }
+        ];
+
+        // Font Options
+        const fontOptions = [
+            { id: 'poppins', name: 'Poppins', font: "'Poppins', sans-serif" },
+            { id: 'roboto', name: 'Roboto', font: "'Roboto', sans-serif" },
+            { id: 'open-sans', name: 'Open Sans', font: "'Open Sans', sans-serif" },
+            { id: 'lora', name: 'Lora', font: "'Lora', serif" },
+            { id: 'montserrat', name: 'Montserrat', font: "'Montserrat', sans-serif" },
+            { id: 'nunito', name: 'Nunito', font: "'Nunito', sans-serif" },
+            { id: 'raleway', name: 'Raleway', font: "'Raleway', sans-serif" },
+            { id: 'merriweather', name: 'Merriweather', font: "'Merriweather', serif" },
+            { id: 'source-sans', name: 'Source Sans', font: "'Source Sans Pro', sans-serif" },
+            { id: 'ubuntu', name: 'Ubuntu', font: "'Ubuntu', sans-serif" },
+            { id: 'varela', name: 'Varela Round', font: "'Varela Round', sans-serif" },
+            { id: 'georgia', name: 'Georgia', font: "Georgia, serif" },
+            { id: 'verdana', name: 'Verdana', font: "Verdana, sans-serif" },
+            { id: 'trebuchet', name: 'Trebuchet MS', font: "'Trebuchet MS', sans-serif" }
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadQuotes();
+            applyTheme();
+            applyFont();
+            applyFontSize();
+            applyFontWeight();
+            applyFontStyle();
+            applyDarkMode();
+            renderPage(currentPage);
+            setupEventListeners();
+        });
+
+        // Event Listeners Setup
+        function setupEventListeners() {
+            menuToggle.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', closeMenu);
+            logo.addEventListener('click', goHome);
+            darkModeToggle.addEventListener('change', toggleDarkMode);
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.getAttribute('data-page');
+                    if (page !== currentPage) {
+                        currentPage = page;
+                        renderPage(currentPage);
+                        updateMenuActiveState();
+                        closeMenu();
+                    }
+                });
+            });
+        }
+
+        // Go to Home
+        function goHome() {
+            if (currentPage !== 'home') {
+                currentPage = 'home';
+                renderPage(currentPage);
+                updateMenuActiveState();
+            }
+        }
+
+        // Toggle Menu
+        function toggleMenu() {
+            sideMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = sideMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Close Menu
+        function closeMenu() {
+            sideMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Update Active Menu Item
+        function updateMenuActiveState() {
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-page') === currentPage) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        // Toggle Dark Mode
+        function toggleDarkMode() {
+            darkMode = darkModeToggle.checked;
+            localStorage.setItem('darkMode', darkMode);
+            applyDarkMode();
+        }
+
+        // Apply Dark Mode
+        function applyDarkMode() {
+            darkModeToggle.checked = darkMode;
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+
+        // Load Quotes from JSON
+        async function loadQuotes() {
+            try {
+                const response = await fetch('quotes.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load quotes');
+                }
+                quotes = await response.json();
+            } catch (error) {
+                console.error("Error loading quotes:", error);
+                // Fallback to default quotes if fetch fails
+                quotes = getDefaultQuotes();
+            }
+        }
+
+        // Default quotes if JSON fails
+        function getDefaultQuotes() {
+            return [
+                {
+                    id: 1,
+                    text: "The only way to do great work is to love what you do.",
+                    author: "Steve Jobs",
+                    tags: ["motivation", "success"],
+                    category: "motivation"
+                },
+                {
+                    id: 2,
+                    text: "In the middle of difficulty lies opportunity.",
+                    author: "Albert Einstein",
+                    tags: ["inspiration", "wisdom"],
+                    category: "inspiration"
+                },
+                {
+                    id: 3,
+                    text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+                    author: "Winston Churchill",
+                    tags: ["success", "motivation"],
+                    category: "success"
+                },
+                {
+                    id: 4,
+                    text: "The journey of a thousand miles begins with one step.",
+                    author: "Lao Tzu",
+                    tags: ["wisdom", "life"],
+                    category: "wisdom"
+                },
+                {
+                    id: 5,
+                    text: "Happiness is not something ready made. It comes from your own actions.",
+                    author: "Dalai Lama",
+                    tags: ["happiness", "life"],
+                    category: "life"
+                },
+                {
+                    id: 6,
+                    text: "Believe you can and you're halfway there.",
+                    author: "Theodore Roosevelt",
+                    tags: ["motivation", "confidence"],
+                    category: "motivation"
+                },
+                {
+                    id: 7,
+                    text: "The future belongs to those who believe in the beauty of their dreams.",
+                    author: "Eleanor Roosevelt",
+                    tags: ["inspiration", "dreams"],
+                    category: "inspiration"
+                },
+                {
+                    id: 8,
+                    text: "Do not watch the clock. Do what it does. Keep going.",
+                    author: "Sam Levenson",
+                    tags: ["perseverance", "time"],
+                    category: "time"
+                },
+                {
+                    id: 9,
+                    text: "The only limit to our realization of tomorrow is our doubts of today.",
+                    author: "Franklin D. Roosevelt",
+                    tags: ["confidence", "future"],
+                    category: "wisdom"
+                },
+                {
+                    id: 10,
+                    text: "It is during our darkest moments that we must focus to see the light.",
+                    author: "Aristotle",
+                    tags: ["hope", "difficulty"],
+                    category: "wisdom"
+                },
+                {
+                    id: 11,
+                    text: "Life is what happens when you're busy making other plans.",
+                    author: "John Lennon",
+                    tags: ["life", "wisdom"],
+                    category: "life"
+                },
+                {
+                    id: 12,
+                    text: "Spread love everywhere you go. Let no one ever come to you without leaving happier.",
+                    author: "Mother Teresa",
+                    tags: ["love", "kindness"],
+                    category: "love"
+                },
+                {
+                    id: 13,
+                    text: "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+                    author: "Benjamin Franklin",
+                    tags: ["education", "wisdom"],
+                    category: "education"
+                },
+                {
+                    id: 14,
+                    text: "Whoever is happy will make others happy too.",
+                    author: "Anne Frank",
+                    tags: ["happiness", "life"],
+                    category: "life"
+                },
+                {
+                    id: 15,
+                    text: "You will face many defeats in life, but never let yourself be defeated.",
+                    author: "Maya Angelou",
+                    tags: ["motivation", "perseverance"],
+                    category: "motivation"
+                }
+            ];
+        }
+
+        // Get all unique authors
+        function getAllAuthors() {
+            const authors = [...new Set(quotes.map(quote => quote.author))];
+            return authors.map(author => {
+                return {
+                    name: author,
+                    count: quotes.filter(quote => quote.author === author).length
+                };
+            }).sort((a, b) => b.count - a.count);
+        }
+
+        // Render Current Page
+        function renderPage(page) {
+            switch (page) {
+                case 'home':
+                    renderHomePage();
+                    break;
+                case 'favorites':
+                    renderFavoritesPage();
+                    break;
+                case 'categories':
+                    renderCategoriesPage();
+                    break;
+                case 'authors':
+                    renderAuthorsPage();
+                    break;
+                case 'settings':
+                    renderSettingsPage();
+                    break;
+                case 'about':
+                    renderAboutPage();
+                    break;
+                default:
+                    renderHomePage();
+            }
+        }
+
+        // Render Home Page
+        function renderHomePage() {
+            if (quotes.length === 0) {
+                mainContent.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>No Quotes Available</h3>
+                        <p>Failed to load quotes. Please try again later.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const randomQuote = getRandomQuote();
+            
+            mainContent.innerHTML = `
+                <div class="quote-card fade-in">
+                    <div class="quote-text">${randomQuote.text}</div>
+                    <div class="quote-author">
+                        <i class="fas fa-feather-alt"></i>
+                        <span>${randomQuote.author}</span>
+                    </div>
+                    <div class="quote-meta">
+                        <div class="tags">
+                            ${randomQuote.tags.map(tag => `
+                                <span class="tag">
+                                    <i class="fas fa-tag"></i>
+                                    ${tag}
+                                </span>
+                            `).join('')}
+                        </div>
+                        <div>${categories.find(c => c.id === randomQuote.category)?.name || 'General'}</div>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button id="new-quote">
+                        <i class="fas fa-redo"></i>
+                        New Quote
+                    </button>
+                    <button class="secondary" id="copy-quote">
+                        <i class="far fa-copy"></i>
+                        Copy
+                    </button>
+                    <button class="accent" id="favorite-quote">
+                        <i class="${isFavorite(randomQuote) ? 'fas' : 'far'} fa-heart"></i>
+                        ${isFavorite(randomQuote) ? 'Favorited' : 'Favorite'}
+                    </button>
+                    <button class="secondary" id="share-quote">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                </div>
+            `;
+
+            // Add event listeners for home page buttons
+            document.getElementById('new-quote').addEventListener('click', renderHomePage);
+            document.getElementById('copy-quote').addEventListener('click', copyQuote);
+            document.getElementById('favorite-quote').addEventListener('click', () => toggleFavorite(randomQuote));
+            document.getElementById('share-quote').addEventListener('click', () => shareQuote(randomQuote));
+        }
+
+        // Check if quote is favorite
+        function isFavorite(quote) {
+            return favorites.some(fav => 
+                fav.text === quote.text && fav.author === quote.author
+            );
+        }
+
+        // Render Favorites Page
+        function renderFavoritesPage() {
+            mainContent.innerHTML = `
+                <h1 class="page-title">Your Favorites</h1>
+                
+                ${favorites.length > 0 ? 
+                    favorites.map((quote, index) => `
+                        <div class="quote-card fade-in" style="animation-delay: ${index * 0.05}s">
+                            <div class="quote-text">${quote.text}</div>
+                            <div class="quote-author">
+                                <i class="fas fa-feather-alt"></i>
+                                <span>${quote.author}</span>
+                            </div>
+                            <div class="quote-meta">
+                                <div class="tags">
+                                    ${quote.tags.map(tag => `
+                                        <span class="tag">
+                                            <i class="fas fa-tag"></i>
+                                            ${tag}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                                <button class="danger remove-favorite" data-index="${index}" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">
+                                    <i class="fas fa-trash"></i>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                    `).join('') :
+                    `<div class="empty-state">
+                        <div class="empty-icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <h3>No Favorites Yet</h3>
+                        <p>Save quotes you love by clicking the heart icon</p>
+                    </div>`
+                }
+            `;
+            
+            // Add event listeners for remove buttons
+            document.querySelectorAll('.remove-favorite').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    favorites.splice(index, 1);
+                    localStorage.setItem('favorites', JSON.stringify(favorites));
+                    renderFavoritesPage();
+                });
+            });
+        }
+
+        // Render Categories Page
+        function renderCategoriesPage() {
+            mainContent.innerHTML = `
+                <h1 class="page-title">Categories</h1>
+                
+                <div class="categories-grid">
+                    ${categories.map(category => {
+                        const count = quotes.filter(q => q.category === category.id).length;
+                        return `
+                            <div class="category-card" data-category="${category.id}">
+                                <div class="category-icon">
+                                    <i class="${category.icon}"></i>
+                                </div>
+                                <h3 class="category-name">${category.name}</h3>
+                                <div class="category-count">${count} quotes</div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+
+            // Add event listeners for category cards
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const categoryId = this.getAttribute('data-category');
+                    showCategoryQuotes(categoryId);
+                });
+            });
+        }
+
+        // Show Quotes for Specific Category
+        function showCategoryQuotes(categoryId) {
+            const categoryQuotes = quotes.filter(quote => quote.category === categoryId);
+            const category = categories.find(c => c.id === categoryId);
+            
+            if (categoryQuotes.length === 0) {
+                mainContent.innerHTML = `
+                    <h1 class="page-title">${category.name}</h1>
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i class="far fa-folder-open"></i>
+                        </div>
+                        <h3>No Quotes Found</h3>
+                        <p>There are no quotes in this category yet</p>
+                    </div>
+                    <button class="secondary" id="back-to-categories" style="margin-top: 1.5rem;">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Categories
+                    </button>
+                `;
+                
+                document.getElementById('back-to-categories').addEventListener('click', () => renderCategoriesPage());
+                return;
+            }
+            
+            mainContent.innerHTML = `
+                <h1 class="page-title">${category.name}</h1>
+                
+                ${categoryQuotes.map((quote, index) => `
+                    <div class="quote-card fade-in" style="animation-delay: ${index * 0.05}s">
+                        <div class="quote-text">${quote.text}</div>
+                        <div class="quote-author">
+                            <i class="fas fa-feather-alt"></i>
+                            <span>${quote.author}</span>
+                        </div>
+                        <div class="quote-meta">
+                            <div class="tags">
+                                ${quote.tags.map(tag => `
+                                    <span class="tag">
+                                        <i class="fas fa-tag"></i>
+                                        ${tag}
+                                    </span>
+                                `).join('')}
+                            </div>
+                            <button class="${isFavorite(quote) ? 'success' : 'accent'} favorite-category" data-id="${quote.id}" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">
+                                <i class="${isFavorite(quote) ? 'fas' : 'far'} fa-heart"></i>
+                                ${isFavorite(quote) ? 'Favorited' : 'Favorite'}
+                            </button>
+                        </div>
+                    </div>
+                `).join('')}
+                
+                <button class="secondary" id="back-to-categories" style="margin-top: 1.5rem;">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Categories
+                </button>
+            `;
+            
+            // Add event listeners for favorite buttons
+            document.querySelectorAll('.favorite-category').forEach(button => {
+                button.addEventListener('click', function() {
+                    const quoteId = parseInt(this.getAttribute('data-id'));
+                    const quote = quotes.find(q => q.id === quoteId);
+                    if (quote) {
+                        toggleFavorite(quote);
+                        // Update the button state
+                        this.innerHTML = isFavorite(quote) 
+                            ? '<i class="fas fa-heart"></i> Favorited' 
+                            : '<i class="far fa-heart"></i> Favorite';
+                        this.classList.toggle('success', isFavorite(quote));
+                        this.classList.toggle('accent', !isFavorite(quote));
+                    }
+                });
+            });
+            
+            document.getElementById('back-to-categories').addEventListener('click', () => renderCategoriesPage());
+        }
+
+        // Render Authors Page
+        function renderAuthorsPage() {
+            const authors = getAllAuthors();
+            
+            mainContent.innerHTML = `
+                <h1 class="page-title">Authors</h1>
+                
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search authors..." id="author-search">
+                </div>
+                
+                <div class="authors-list" id="authors-list">
+                    ${authors.map(author => `
+                        <div class="author-card" data-author="${author.name}">
+                            <div class="author-avatar">${author.name.charAt(0)}</div>
+                            <div class="author-name">${author.name}</div>
+                            <div class="author-quote-count">${author.count} quotes</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            // Add event listener for search
+            document.getElementById('author-search').addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const authorCards = document.querySelectorAll('.author-card');
+                
+                authorCards.forEach(card => {
+                    const authorName = card.getAttribute('data-author').toLowerCase();
+                    if (authorName.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Add event listeners for author cards
+            document.querySelectorAll('.author-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const authorName = this.getAttribute('data-author');
+                    showAuthorQuotes(authorName);
+                });
+            });
+        }
+
+        // Show Quotes by Author
+        function showAuthorQuotes(authorName) {
+            const authorQuotes = quotes.filter(quote => quote.author === authorName);
+            
+            if (authorQuotes.length === 0) {
+                mainContent.innerHTML = `
+                    <h1 class="page-title">${authorName}</h1>
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i class="fas fa-user-edit"></i>
+                        </div>
+                        <h3>No Quotes Found</h3>
+                        <p>No quotes available for this author</p>
+                    </div>
+                    <button class="secondary" id="back-to-authors" style="margin-top: 1.5rem;">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Authors
+                    </button>
+                `;
+                
+                document.getElementById('back-to-authors').addEventListener('click', () => renderAuthorsPage());
+                return;
+            }
+            
+            mainContent.innerHTML = `
+                <h1 class="page-title">${authorName}</h1>
+                
+                ${authorQuotes.map((quote, index) => `
+                    <div class="quote-card fade-in" style="animation-delay: ${index * 0.05}s">
+                        <div class="quote-text">${quote.text}</div>
+                        <div class="quote-meta">
+                            <div class="tags">
+                                ${quote.tags.map(tag => `
+                                    <span class="tag">
+                                        <i class="fas fa-tag"></i>
+                                        ${tag}
+                                    </span>
+                                `).join('')}
+                            </div>
+                            <div>${categories.find(c => c.id === quote.category)?.name || 'General'}</div>
+                        </div>
+                    </div>
+                `).join('')}
+                
+                <button class="secondary" id="back-to-authors" style="margin-top: 1.5rem;">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Authors
+                </button>
+            `;
+            
+            document.getElementById('back-to-authors').addEventListener('click', () => renderAuthorsPage());
+        }
+
+        // Render About Page
+        function renderAboutPage() {
+            const totalQuotes = quotes.length;
+            const totalAuthors = getAllAuthors().length;
+            const totalCategories = [...new Set(quotes.map(q => q.category))].length;
+            const totalTags = [...new Set(quotes.flatMap(q => q.tags))].length;
+            
+            mainContent.innerHTML = `
+                <h1 class="page-title">About Serenity</h1>
+                
+                <div class="about-card">
+                    <div class="about-section">
+                        <h3>App Information</h3>
+                        <p>Serenity is a beautiful quotes app designed to inspire and motivate you every day.</p>
+                        <p>Version: <strong>Serenity v2.0.0</strong></p>
+                        <p>Developed with <i class="fas fa-heart" style="color: var(--current-primary);"></i> by Adarsh Tiwari</p>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Statistics</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-quote-right"></i> ${totalQuotes} Inspirational Quotes</li>
+                            <li><i class="fas fa-user-edit"></i> ${totalAuthors} Authors</li>
+                            <li><i class="fas fa-tags"></i> ${totalCategories} Categories</li>
+                            <li><i class="fas fa-tag"></i> ${totalTags} Tags</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Features</h3>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-star"></i> Beautifully designed interface</li>
+                            <li><i class="fas fa-heart"></i> Save your favorite quotes</li>
+                            <li><i class="fas fa-palette"></i> Multiple themes and fonts</li>
+                            <li><i class="fas fa-moon"></i> Dark mode support</li>
+                            <li><i class="fas fa-search"></i> Search by author</li>
+                            <li><i class="fas fa-tags"></i> Browse by categories</li>
+                            <li><i class="fas fa-share-alt"></i> Share quotes with friends</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Feedback</h3>
+                        <p>We'd love to hear your feedback to make Serenity even better!</p>
+                        <button class="secondary" id="contact-button" style="margin-top: 0.5rem;">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('contact-button').addEventListener('click', () => {
+                alert('Thank you for your interest! You can contact us at serenity@example.com');
+            });
+        }
+
+        // Render Settings Page
+        function renderSettingsPage() {
+            mainContent.innerHTML = `
+                <h1 class="page-title">Settings</h1>
+                
+                <div class="quote-card">
+                    <div class="setting-group">
+                        <h3 class="setting-title">
+                            <i class="fas fa-palette"></i>
+                            Theme
+                        </h3>
+                        <div class="setting-options">
+                            <div class="theme-option theme-1 ${currentTheme === 'theme-1' ? 'active' : ''}" data-theme="theme-1">
+                                <span class="theme-name">Serenity</span>
+                            </div>
+                            <div class="theme-option theme-2 ${currentTheme === 'theme-2' ? 'active' : ''}" data-theme="theme-2">
+                                <span class="theme-name">Nature</span>
+                            </div>
+                            <div class="theme-option theme-3 ${currentTheme === 'theme-3' ? 'active' : ''}" data-theme="theme-3">
+                                <span class="theme-name">Royal</span>
+                            </div>
+                            <div class="theme-option theme-4 ${currentTheme === 'theme-4' ? 'active' : ''}" data-theme="theme-4">
+                                <span class="theme-name">Vibrant</span>
+                            </div>
+                            <div class="theme-option theme-5 ${currentTheme === 'theme-5' ? 'active' : ''}" data-theme="theme-5">
+                                <span class="theme-name">Mystic</span>
+                            </div>
+                            <div class="theme-option theme-6 ${currentTheme === 'theme-6' ? 'active' : ''}" data-theme="theme-6">
+                                <span class="theme-name">Forest</span>
+                            </div>
+                            <div class="theme-option theme-7 ${currentTheme === 'theme-7' ? 'active' : ''}" data-theme="theme-7">
+                                <span class="theme-name">Ocean</span>
+                            </div>
+                            <div class="theme-option theme-8 ${currentTheme === 'theme-8' ? 'active' : ''}" data-theme="theme-8">
+                                <span class="theme-name">Emerald</span>
+                            </div>
+                            <div class="theme-option theme-9 ${currentTheme === 'theme-9' ? 'active' : ''}" data-theme="theme-9">
+                                <span class="theme-name">Violet</span>
+                            </div>
+                            <div class="theme-option theme-10 ${currentTheme === 'theme-10' ? 'active' : ''}" data-theme="theme-10">
+                                <span class="theme-name">Sage</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <h3 class="setting-title">
+                            <i class="fas fa-font"></i>
+                            Font Family
+                        </h3>
+                        <select id="font-select">
+                            ${fontOptions.map(font => `
+                                <option value="${font.id}" ${currentFont === font.id ? 'selected' : ''}>${font.name}</option>
+                            `).join('')}
+                        </select>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <h3 class="setting-title">
+                            <i class="fas fa-text-height"></i>
+                            Font Size
+                        </h3>
+                        <div class="range-container">
+                            <input type="range" id="font-size-range" min="0.8" max="1.3" step="0.1" value="${getFontSizeValue()}">
+                            <span class="range-value">${currentFontSize}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <h3 class="setting-title">
+                            <i class="fas fa-bold"></i>
+                            Text Style
+                        </h3>
+                        <div class="text-style-buttons">
+                            <button class="text-style-button ${fontWeight === '300' ? 'active' : ''}" data-weight="300" style="font-weight: 300;">
+                                Light
+                            </button>
+                            <button class="text-style-button ${fontWeight === '400' ? 'active' : ''}" data-weight="400" style="font-weight: 400;">
+                                Regular
+                            </button>
+                            <button class="text-style-button ${fontWeight === '500' ? 'active' : ''}" data-weight="500" style="font-weight: 500;">
+                                Medium
+                            </button>
+                            <button class="text-style-button ${fontWeight === '600' ? 'active' : ''}" data-weight="600" style="font-weight: 600;">
+                                Semi-bold
+                            </button>
+                            <button class="text-style-button ${fontWeight === '700' ? 'active' : ''}" data-weight="700" style="font-weight: 700;">
+                                Bold
+                            </button>
+                        </div>
+                        <div class="text-style-buttons" style="margin-top: 0.5rem;">
+                            <button class="text-style-button ${fontStyle === 'normal' ? 'active' : ''}" data-style="normal" style="font-style: normal;">
+                                Normal
+                            </button>
+                            <button class="text-style-button ${fontStyle === 'italic' ? 'active' : ''}" data-style="italic" style="font-style: italic;">
+                                Italic
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <h3 class="setting-title">
+                            <i class="fas fa-adjust"></i>
+                            Appearance
+                        </h3>
+                        <div class="toggle-label">
+                            <span>Dark Mode</span>
+                            <label class="toggle-switch" style="margin-left: auto;">
+                                <input type="checkbox" id="dark-mode-settings" ${darkMode ? 'checked' : ''}>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quote-card" style="margin-top: 1.5rem;">
+                    <div class="setting-group">
+                        <h3 class="setting-title">
+                            <i class="fas fa-trash-alt"></i>
+                            Data Management
+                        </h3>
+                        <button class="danger" id="clear-favorites">
+                            <i class="fas fa-trash"></i>
+                            Clear Favorites
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="quote-card" style="margin-top: 1.5rem; text-align: center;">
+                    <p style="color: var(--muted); font-size: 0.9rem;">
+                        Serenity Quotes v2.0.0<br>
+                        &copy; ${new Date().getFullYear()} All Rights Reserved
+                    </p>
+                </div>
+            `;
+
+            // Add event listeners for settings
+            document.querySelectorAll('.theme-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    currentTheme = this.getAttribute('data-theme');
+                    localStorage.setItem('theme', currentTheme);
+                    applyTheme();
+                    renderSettingsPage();
+                });
+            });
+
+            document.getElementById('font-select').addEventListener('change', function() {
+                currentFont = this.value;
+                localStorage.setItem('font', currentFont);
+                applyFont();
+            });
+
+            document.getElementById('font-size-range').addEventListener('input', function() {
+                const sizes = ['small', 'medium', 'large', 'xlarge', 'xxlarge'];
+                const index = Math.floor((this.value - 0.8) / 0.1);
+                currentFontSize = sizes[index];
+                document.querySelector('.range-value').textContent = currentFontSize;
+                localStorage.setItem('fontSize', currentFontSize);
+                applyFontSize();
+            });
+
+            document.querySelectorAll('.text-style-button[data-weight]').forEach(button => {
+                button.addEventListener('click', function() {
+                    fontWeight = this.getAttribute('data-weight');
+                    localStorage.setItem('fontWeight', fontWeight);
+                    applyFontWeight();
+                    renderSettingsPage();
+                });
+            });
+
+            document.querySelectorAll('.text-style-button[data-style]').forEach(button => {
+                button.addEventListener('click', function() {
+                    fontStyle = this.getAttribute('data-style');
+                    localStorage.setItem('fontStyle', fontStyle);
+                    applyFontStyle();
+                    renderSettingsPage();
+                });
+            });
+
+            document.getElementById('dark-mode-settings').addEventListener('change', function() {
+                darkMode = this.checked;
+                localStorage.setItem('darkMode', darkMode);
+                applyDarkMode();
+            });
+
+            document.getElementById('clear-favorites').addEventListener('click', function() {
+                if (confirm('Are you sure you want to clear all your favorites?')) {
+                    favorites = [];
+                    localStorage.setItem('favorites', JSON.stringify(favorites));
+                    if (currentPage === 'favorites') {
+                        renderFavoritesPage();
+                    }
+                }
+            });
+        }
+
+        // Get font size value for range input
+        function getFontSizeValue() {
+            const sizes = ['small', 'medium', 'large', 'xlarge', 'xxlarge'];
+            const index = sizes.indexOf(currentFontSize);
+            return 0.8 + (index * 0.1);
+        }
+
+        // Apply font weight
+        function applyFontWeight() {
+            document.documentElement.style.setProperty('--font-weight', fontWeight);
+            document.body.style.fontWeight = fontWeight;
+        }
+
+        // Apply font style
+        function applyFontStyle() {
+            document.documentElement.style.setProperty('--font-style', fontStyle);
+            document.body.style.fontStyle = fontStyle;
+        }
+
+        // Get Random Quote
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            return quotes[randomIndex];
+        }
+
+        // Copy Quote to Clipboard
+        function copyQuote() {
+            const quoteText = document.querySelector('.quote-text').textContent;
+            const author = document.querySelector('.quote-author span').textContent;
+            const text = `"${quoteText}" — ${author}`;
+            
+            navigator.clipboard.writeText(text);
+            
+            const copyBtn = document.getElementById('copy-quote');
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            copyBtn.classList.add('success');
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+                copyBtn.classList.remove('success');
+            }, 2000);
+        }
+
+        // Toggle Favorite
+        function toggleFavorite(quote) {
+            const index = favorites.findIndex(fav => 
+                fav.text === quote.text && fav.author === quote.author
+            );
+            
+            if (index === -1) {
+                favorites.push(quote);
+            } else {
+                favorites.splice(index, 1);
+            }
+            
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            
+            const favoriteBtn = document.getElementById('favorite-quote');
+            if (favoriteBtn) {
+                const isFavorite = index === -1;
+                
+                favoriteBtn.innerHTML = isFavorite 
+                    ? '<i class="fas fa-heart"></i> Favorited' 
+                    : '<i class="far fa-heart"></i> Favorite';
+                    
+                favoriteBtn.classList.toggle('success', isFavorite);
+            }
+        }
+
+        // Share Quote
+        function shareQuote(quote) {
+            const text = `"${quote.text}" — ${quote.author}`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Inspirational Quote',
+                    text: text,
+                    url: window.location.href
+                }).catch(err => {
+                    console.log('Error sharing:', err);
+                    copyToClipboard(text);
+                });
+            } else {
+                copyToClipboard(text);
+            }
+        }
+
+        // Copy to Clipboard Helper
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert('Quote copied to clipboard!');
+        }
+
+        // Apply Theme
+        function applyTheme() {
+            const themes = {
+                'theme-1': {
+                    primary: 'var(--theme-1-primary)',
+                    secondary: 'var(--theme-1-secondary)',
+                    accent: 'var(--theme-1-accent)',
+                    bg: 'var(--theme-1-bg)',
+                    card: 'var(--theme-1-card)',
+                    text: 'var(--theme-1-text)'
+                },
+                'theme-2': {
+                    primary: 'var(--theme-2-primary)',
+                    secondary: 'var(--theme-2-secondary)',
+                    accent: 'var(--theme-2-accent)',
+                    bg: 'var(--theme-2-bg)',
+                    card: 'var(--theme-2-card)',
+                    text: 'var(--theme-2-text)'
+                },
+                'theme-3': {
+                    primary: 'var(--theme-3-primary)',
+                    secondary: 'var(--theme-3-secondary)',
+                    accent: 'var(--theme-3-accent)',
+                    bg: 'var(--theme-3-bg)',
+                    card: 'var(--theme-3-card)',
+                    text: 'var(--theme-3-text)'
+                },
+                'theme-4': {
+                    primary: 'var(--theme-4-primary)',
+                    secondary: 'var(--theme-4-secondary)',
+                    accent: 'var(--theme-4-accent)',
+                    bg: 'var(--theme-4-bg)',
+                    card: 'var(--theme-4-card)',
+                    text: 'var(--theme-4-text)'
+                },
+                'theme-5': {
+                    primary: 'var(--theme-5-primary)',
+                    secondary: 'var(--theme-5-secondary)',
+                    accent: 'var(--theme-5-accent)',
+                    bg: 'var(--theme-5-bg)',
+                    card: 'var(--theme-5-card)',
+                    text: 'var(--theme-5-text)'
+                },
+                'theme-6': {
+                    primary: 'var(--theme-6-primary)',
+                    secondary: 'var(--theme-6-secondary)',
+                    accent: 'var(--theme-6-accent)',
+                    bg: 'var(--theme-6-bg)',
+                    card: 'var(--theme-6-card)',
+                    text: 'var(--theme-6-text)'
+                },
+                'theme-7': {
+                    primary: 'var(--theme-7-primary)',
+                    secondary: 'var(--theme-7-secondary)',
+                    accent: 'var(--theme-7-accent)',
+                    bg: 'var(--theme-7-bg)',
+                    card: 'var(--theme-7-card)',
+                    text: 'var(--theme-7-text)'
+                },
+                'theme-8': {
+                    primary: 'var(--theme-8-primary)',
+                    secondary: 'var(--theme-8-secondary)',
+                    accent: 'var(--theme-8-accent)',
+                    bg: 'var(--theme-8-bg)',
+                    card: 'var(--theme-8-card)',
+                    text: 'var(--theme-8-text)'
+                },
+                'theme-9': {
+                    primary: 'var(--theme-9-primary)',
+                    secondary: 'var(--theme-9-secondary)',
+                    accent: 'var(--theme-9-accent)',
+                    bg: 'var(--theme-9-bg)',
+                    card: 'var(--theme-9-card)',
+                    text: 'var(--theme-9-text)'
+                },
+                'theme-10': {
+                    primary: 'var(--theme-10-primary)',
+                    secondary: 'var(--theme-10-secondary)',
+                    accent: 'var(--theme-10-accent)',
+                    bg: 'var(--theme-10-bg)',
+                    card: 'var(--theme-10-card)',
+                    text: 'var(--theme-10-text)'
+                }
+            };
+
+            const theme = themes[currentTheme];
+            document.documentElement.style.setProperty('--current-primary', theme.primary);
+            document.documentElement.style.setProperty('--current-secondary', theme.secondary);
+            document.documentElement.style.setProperty('--current-accent', theme.accent);
+            document.documentElement.style.setProperty('--current-bg', theme.bg);
+            document.documentElement.style.setProperty('--current-card', theme.card);
+            document.documentElement.style.setProperty('--current-text', theme.text);
+        }
+
+        // Apply Font
+        function applyFont() {
+            const font = fontOptions.find(f => f.id === currentFont);
+            if (font) {
+                document.documentElement.style.setProperty('--font-body', font.font);
+                document.body.style.fontFamily = font.font;
+            }
+        }
+
+        // Apply Font Size
+        function applyFontSize() {
+            const fontSizes = {
+                'small': '0.9rem',
+                'medium': '1rem',
+                'large': '1.1rem',
+                'xlarge': '1.2rem',
+                'xxlarge': '1.3rem'
+            };
+            document.documentElement.style.setProperty('--base-font-size', fontSizes[currentFontSize]);
+        }
+    </script>
+</body>
+</html>
