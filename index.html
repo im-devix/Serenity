@@ -78,6 +78,21 @@
             --theme-10-bg: #F3E9D2;
             --theme-10-card: white;
             --theme-10-text: #0A2342;
+
+            /* New Premium Themes */
+            --theme-11-primary: #3A0CA3;
+            --theme-11-secondary: #7209B7;
+            --theme-11-accent: #F72585;
+            --theme-11-bg: #F8F7FF;
+            --theme-11-card: white;
+            --theme-11-text: #240046;
+
+            --theme-12-primary: #FF6D00;
+            --theme-12-secondary: #FF9E00;
+            --theme-12-accent: #FFD600;
+            --theme-12-bg: #FFF8F0;
+            --theme-12-card: white;
+            --theme-12-text: #BF360C;
             
             /* Current Theme */
             --current-primary: var(--theme-1-primary);
@@ -99,6 +114,8 @@
             /* Layout */
             --menu-width: 280px;
             --border-radius: 12px;
+            --border-radius-lg: 16px;
+            --border-radius-xl: 20px;
             --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
             
             /* Other Colors */
@@ -151,10 +168,17 @@
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .logo:hover {
             opacity: 0.8;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
         }
 
         .menu-toggle {
@@ -223,6 +247,16 @@
             font-size: 1.1rem;
         }
 
+        .menu-badge {
+            margin-left: auto;
+            background: var(--current-primary);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
         .overlay {
             position: fixed;
             top: 0;
@@ -257,18 +291,26 @@
             color: var(--current-primary);
             margin-bottom: 1.5rem;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .page-title i {
+            font-size: 1.5rem;
         }
 
         /* Quote Card */
         .quote-card {
             background: var(--current-card);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-lg);
             padding: 1.8rem;
             box-shadow: var(--current-shadow);
             margin-bottom: 1.5rem;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .quote-card::before {
@@ -410,7 +452,7 @@
 
         .category-card {
             background: var(--current-card);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-lg);
             padding: 1.5rem 1rem;
             box-shadow: var(--current-shadow);
             transition: var(--transition);
@@ -422,6 +464,19 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(95, 111, 148, 0.05) 0%, rgba(95, 111, 148, 0) 100%);
+            z-index: 0;
         }
 
         .category-card:hover {
@@ -433,17 +488,23 @@
             font-size: 2rem;
             color: var(--current-primary);
             margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 1;
         }
 
         .category-name {
             font-weight: 500;
             margin-bottom: 0.3rem;
             font-family: var(--font-heading);
+            position: relative;
+            z-index: 1;
         }
 
         .category-count {
             font-size: 0.8rem;
             color: var(--muted);
+            position: relative;
+            z-index: 1;
         }
 
         /* Settings */
@@ -476,6 +537,19 @@
             position: relative;
             overflow: hidden;
         }
+
+        .theme-option.theme-1 { background: linear-gradient(135deg, var(--theme-1-primary) 0%, var(--theme-1-secondary) 100%); }
+        .theme-option.theme-2 { background: linear-gradient(135deg, var(--theme-2-primary) 0%, var(--theme-2-secondary) 100%); }
+        .theme-option.theme-3 { background: linear-gradient(135deg, var(--theme-3-primary) 0%, var(--theme-3-secondary) 100%); }
+        .theme-option.theme-4 { background: linear-gradient(135deg, var(--theme-4-primary) 0%, var(--theme-4-secondary) 100%); }
+        .theme-option.theme-5 { background: linear-gradient(135deg, var(--theme-5-primary) 0%, var(--theme-5-secondary) 100%); }
+        .theme-option.theme-6 { background: linear-gradient(135deg, var(--theme-6-primary) 0%, var(--theme-6-secondary) 100%); }
+        .theme-option.theme-7 { background: linear-gradient(135deg, var(--theme-7-primary) 0%, var(--theme-7-secondary) 100%); }
+        .theme-option.theme-8 { background: linear-gradient(135deg, var(--theme-8-primary) 0%, var(--theme-8-secondary) 100%); }
+        .theme-option.theme-9 { background: linear-gradient(135deg, var(--theme-9-primary) 0%, var(--theme-9-secondary) 100%); }
+        .theme-option.theme-10 { background: linear-gradient(135deg, var(--theme-10-primary) 0%, var(--theme-10-secondary) 100%); }
+        .theme-option.theme-11 { background: linear-gradient(135deg, var(--theme-11-primary) 0%, var(--theme-11-secondary) 100%); }
+        .theme-option.theme-12 { background: linear-gradient(135deg, var(--theme-12-primary) 0%, var(--theme-12-secondary) 100%); }
 
         .theme-option::after {
             content: '';
@@ -614,15 +688,22 @@
             display: flex;
             gap: 0.5rem;
             margin-top: 0.5rem;
+            flex-wrap: wrap;
         }
 
         .text-style-button {
             padding: 0.5rem;
             border-radius: 4px;
             background: var(--current-card);
+            color: var(--current-text);
             border: 1px solid #ddd;
             cursor: pointer;
             transition: var(--transition);
+            font-size: 0.85rem;
+        }
+
+        .text-style-button:hover {
+            border-color: var(--current-primary);
         }
 
         .text-style-button.active {
@@ -710,7 +791,7 @@
 
         .author-card {
             background: var(--current-card);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-lg);
             padding: 1rem;
             box-shadow: var(--current-shadow);
             transition: var(--transition);
@@ -718,6 +799,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .author-card:hover {
@@ -726,20 +808,43 @@
         }
 
         .author-avatar {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: var(--current-primary);
-            color: white;
+            color: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .author-avatar::before {
+            content: attr(data-initials);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: white;
+            background: linear-gradient(135deg, var(--current-primary), var(--current-secondary));
+            border-radius: 50%;
+        }
+
+        .author-info {
+            flex-grow: 1;
+            overflow: hidden;
         }
 
         .author-name {
             font-weight: 500;
-            flex-grow: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .author-quote-count {
@@ -747,13 +852,19 @@
             color: var(--muted);
         }
 
+        .author-chevron {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
         /* About Page */
         .about-card {
             background: var(--current-card);
-            border-radius: var(--border-radius);
+            border-radius: var(--border-radius-lg);
             padding: 1.8rem;
             box-shadow: var(--current-shadow);
             margin-bottom: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .about-section {
@@ -780,6 +891,156 @@
         .feature-list li i {
             color: var(--current-primary);
             margin-top: 0.2rem;
+        }
+
+        /* Quote of the Day */
+        .qotd-banner {
+            background: linear-gradient(135deg, var(--current-primary), var(--current-secondary));
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg);
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qotd-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%);
+        }
+
+        .qotd-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .qotd-text {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .qotd-author {
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.5rem;
+        }
+
+        /* Daily Notification */
+        .notification-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .notification-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Bookmark Button */
+        .bookmark-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: white;
+            z-index: 1;
+        }
+
+        .bookmark-btn:hover {
+            background: rgba(0,0,0,0.2);
+        }
+
+        /* Premium Badge */
+        .premium-badge {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #5E4200;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-left: 0.5rem;
+        }
+
+        /* New Quote Editor */
+        .quote-editor {
+            background: var(--current-card);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--current-shadow);
+        }
+
+        .editor-group {
+            margin-bottom: 1rem;
+        }
+
+        .editor-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--current-primary);
+            font-weight: 500;
+        }
+
+        .editor-input, .editor-textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #ddd;
+            background: var(--current-card);
+            color: var(--current-text);
+            font-family: var(--font-body);
+            transition: var(--transition);
+        }
+
+        .editor-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .editor-input:focus, .editor-textarea:focus {
+            outline: none;
+            border-color: var(--current-primary);
+            box-shadow: 0 0 0 2px rgba(95, 111, 148, 0.2);
+        }
+
+        .tag-input-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .tag-input {
+            flex-grow: 1;
+            min-width: 120px;
         }
 
         /* Responsive */
@@ -825,6 +1086,10 @@
             .authors-list {
                 grid-template-columns: 1fr;
             }
+
+            .controls {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         /* Dark Mode */
@@ -836,7 +1101,7 @@
             --muted: #A0A0A0;
         }
 
-        .dark-mode .quote-card, 
+        .dark-mode .quote-card,
         .dark-mode .about-card,
         .dark-mode .author-card,
         .dark-mode .category-card {
@@ -848,7 +1113,9 @@
         }
 
         .dark-mode select,
-        .dark-mode .search-input {
+        .dark-mode .search-input,
+        .dark-mode .editor-input,
+        .dark-mode .editor-textarea {
             background: rgba(255,255,255,0.05);
             border-color: rgba(255,255,255,0.1);
             color: white;
@@ -865,13 +1132,21 @@
         .dark-mode .text-style-button {
             border-color: rgba(255,255,255,0.1);
             background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .dark-mode .notification-toggle {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="logo" id="logo">Serenity</div>
+        <div class="logo" id="logo">
+            <i class="fas fa-quote-left logo-icon"></i>
+            <span>Serenity</span>
+        </div>
         <button class="menu-toggle" id="menu-toggle">
             <i class="fas fa-bars"></i>
         </button>
@@ -886,6 +1161,7 @@
         <a href="#" class="menu-item" data-page="favorites">
             <i class="fas fa-heart"></i>
             <span>Favorites</span>
+            <span class="menu-badge" id="favorites-count">0</span>
         </a>
         <a href="#" class="menu-item" data-page="categories">
             <i class="fas fa-tags"></i>
@@ -894,6 +1170,10 @@
         <a href="#" class="menu-item" data-page="authors">
             <i class="fas fa-user-edit"></i>
             <span>Authors</span>
+        </a>
+        <a href="#" class="menu-item" data-page="add-quote">
+            <i class="fas fa-plus-circle"></i>
+            <span>Add Quote</span>
         </a>
         <a href="#" class="menu-item" data-page="settings">
             <i class="fas fa-cog"></i>
@@ -936,6 +1216,7 @@
         const menuItems = document.querySelectorAll('.menu-item');
         const logo = document.getElementById('logo');
         const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const favoritesCountBadge = document.getElementById('favorites-count');
 
         // State
         let currentPage = 'home';
@@ -947,6 +1228,9 @@
         let darkMode = localStorage.getItem('darkMode') === 'true' || false;
         let fontWeight = localStorage.getItem('fontWeight') || '400';
         let fontStyle = localStorage.getItem('fontStyle') || 'normal';
+        let dailyNotification = localStorage.getItem('dailyNotification') === 'true' || false;
+        let quoteOfTheDay = null;
+        let isPremium = localStorage.getItem('isPremium') === 'true' || false;
 
         // Categories
         const categories = [
@@ -993,15 +1277,115 @@
         // Initialize
         document.addEventListener('DOMContentLoaded', async () => {
             await loadQuotes();
+            setQuoteOfTheDay();
             applyTheme();
             applyFont();
             applyFontSize();
             applyFontWeight();
             applyFontStyle();
             applyDarkMode();
+            updateFavoritesCount();
             renderPage(currentPage);
             setupEventListeners();
+            checkForDailyNotification();
         });
+
+        // Set Quote of the Day
+        function setQuoteOfTheDay() {
+            const today = new Date().toDateString();
+            const lastQOTDDate = localStorage.getItem('lastQOTDDate');
+            
+            if (lastQOTDDate === today && localStorage.getItem('quoteOfTheDay')) {
+                quoteOfTheDay = JSON.parse(localStorage.getItem('quoteOfTheDay'));
+            } else {
+                quoteOfTheDay = getRandomQuote();
+                localStorage.setItem('quoteOfTheDay', JSON.stringify(quoteOfTheDay));
+                localStorage.setItem('lastQOTDDate', today);
+            }
+        }
+
+        // Update favorites count badge
+        function updateFavoritesCount() {
+            favoritesCountBadge.textContent = favorites.length;
+        }
+
+        // Check for daily notification
+        function checkForDailyNotification() {
+            if (dailyNotification) {
+                const now = new Date();
+                const notificationTime = localStorage.getItem('notificationTime') || '09:00';
+                const [hours, minutes] = notificationTime.split(':').map(Number);
+                
+                const notificationDate = new Date();
+                notificationDate.setHours(hours, minutes, 0, 0);
+                
+                // If notification time is in the future today
+                if (now < notificationDate) {
+                    const timeout = notificationDate - now;
+                    setTimeout(() => showDailyNotification(), timeout);
+                }
+                // If notification time is passed, schedule for next day
+                else {
+                    const nextDay = new Date();
+                    nextDay.setDate(nextDay.getDate() + 1);
+                    nextDay.setHours(hours, minutes, 0, 0);
+                    const timeout = nextDay - now;
+                    setTimeout(() => showDailyNotification(), timeout);
+                }
+            }
+        }
+
+        // Show daily notification
+        function showDailyNotification() {
+            if (!('Notification' in window)) {
+                return;
+            }
+            
+            if (Notification.permission === 'granted') {
+                const notification = new Notification('Your Daily Quote', {
+                    body: `"${quoteOfTheDay.text}" — ${quoteOfTheDay.author}`,
+                    icon: '/img/icon.png'
+                });
+                
+                notification.onclick = () => {
+                    window.focus();
+                    currentPage = 'home';
+                    renderPage(currentPage);
+                    updateMenuActiveState();
+                };
+            }
+            
+            // Schedule next notification
+            const nextDay = new Date();
+            nextDay.setDate(nextDay.getDate() + 1);
+            const notificationTime = localStorage.getItem('notificationTime') || '09:00';
+            const [hours, minutes] = notificationTime.split(':').map(Number);
+            nextDay.setHours(hours, minutes, 0, 0);
+            
+            const now = new Date();
+            const timeout = nextDay - now;
+            setTimeout(() => showDailyNotification(), timeout);
+        }
+
+        // Request notification permission
+        function requestNotificationPermission() {
+            if (!('Notification' in window)) {
+                alert('This browser does not support desktop notifications');
+                return;
+            }
+            
+            if (Notification.permission === 'granted') {
+                return;
+            }
+            
+            if (Notification.permission !== 'denied') {
+                Notification.requestPermission().then(permission => {
+                    if (permission === 'granted') {
+                        checkForDailyNotification();
+                    }
+                });
+            }
+        }
 
         // Event Listeners Setup
         function setupEventListeners() {
@@ -1082,6 +1466,12 @@
                     throw new Error('Failed to load quotes');
                 }
                 quotes = await response.json();
+                // Add IDs if not present
+                quotes.forEach((quote, index) => {
+                    if (!quote.id) {
+                        quote.id = index + 1;
+                    }
+                });
             } catch (error) {
                 console.error("Error loading quotes:", error);
                 // Fallback to default quotes if fetch fails
@@ -1226,6 +1616,9 @@
                 case 'authors':
                     renderAuthorsPage();
                     break;
+                case 'add-quote':
+                    renderAddQuotePage();
+                    break;
                 case 'settings':
                     renderSettingsPage();
                     break;
@@ -1237,7 +1630,7 @@
             }
         }
 
-        // Render Home Page
+        // Render Home Page (unchanged as requested)
         function renderHomePage() {
             if (quotes.length === 0) {
                 mainContent.innerHTML = `
@@ -1255,6 +1648,21 @@
             const randomQuote = getRandomQuote();
             
             mainContent.innerHTML = `
+                <div class="qotd-banner">
+                    <div class="qotd-label">
+                        <i class="fas fa-calendar-star"></i>
+                        <span>Quote of the Day</span>
+                    </div>
+                    <div class="qotd-text">${quoteOfTheDay.text}</div>
+                    <div class="qotd-author">
+                        <i class="fas fa-feather-alt"></i>
+                        <span>${quoteOfTheDay.author}</span>
+                    </div>
+                    <div class="bookmark-btn" id="bookmark-qotd">
+                        <i class="${isFavorite(quoteOfTheDay) ? 'fas' : 'far'} fa-bookmark"></i>
+                    </div>
+                </div>
+                
                 <div class="quote-card fade-in">
                     <div class="quote-text">${randomQuote.text}</div>
                     <div class="quote-author">
@@ -1297,13 +1705,22 @@
             // Add event listeners for home page buttons
             document.getElementById('new-quote').addEventListener('click', renderHomePage);
             document.getElementById('copy-quote').addEventListener('click', copyQuote);
-            document.getElementById('favorite-quote').addEventListener('click', () => toggleFavorite(randomQuote));
+            document.getElementById('favorite-quote').addEventListener('click', () => {
+                toggleFavorite(randomQuote);
+                updateFavoritesCount();
+            });
             document.getElementById('share-quote').addEventListener('click', () => shareQuote(randomQuote));
+            document.getElementById('bookmark-qotd').addEventListener('click', () => {
+                toggleFavorite(quoteOfTheDay);
+                const bookmarkBtn = document.getElementById('bookmark-qotd');
+                bookmarkBtn.innerHTML = `<i class="${isFavorite(quoteOfTheDay) ? 'fas' : 'far'} fa-bookmark"></i>`;
+                updateFavoritesCount();
+            });
         }
 
         // Check if quote is favorite
         function isFavorite(quote) {
-            return favorites.some(fav => 
+            return favorites.some(fav =>
                 fav.text === quote.text && fav.author === quote.author
             );
         }
@@ -1311,9 +1728,12 @@
         // Render Favorites Page
         function renderFavoritesPage() {
             mainContent.innerHTML = `
-                <h1 class="page-title">Your Favorites</h1>
+                <h1 class="page-title">
+                    <i class="fas fa-heart"></i>
+                    Your Favorites
+                </h1>
                 
-                ${favorites.length > 0 ? 
+                ${favorites.length > 0 ?
                     favorites.map((quote, index) => `
                         <div class="quote-card fade-in" style="animation-delay: ${index * 0.05}s">
                             <div class="quote-text">${quote.text}</div>
@@ -1323,12 +1743,12 @@
                             </div>
                             <div class="quote-meta">
                                 <div class="tags">
-                                    ${quote.tags.map(tag => `
+                                    ${quote.tags?.map(tag => `
                                         <span class="tag">
                                             <i class="fas fa-tag"></i>
                                             ${tag}
                                         </span>
-                                    `).join('')}
+                                    `).join('') || ''}
                                 </div>
                                 <button class="danger remove-favorite" data-index="${index}" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">
                                     <i class="fas fa-trash"></i>
@@ -1353,6 +1773,7 @@
                     const index = parseInt(this.getAttribute('data-index'));
                     favorites.splice(index, 1);
                     localStorage.setItem('favorites', JSON.stringify(favorites));
+                    updateFavoritesCount();
                     renderFavoritesPage();
                 });
             });
@@ -1361,13 +1782,21 @@
         // Render Categories Page
         function renderCategoriesPage() {
             mainContent.innerHTML = `
-                <h1 class="page-title">Categories</h1>
+                <h1 class="page-title">
+                    <i class="fas fa-tags"></i>
+                    Categories
+                </h1>
                 
-                <div class="categories-grid">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search categories..." id="category-search">
+                </div>
+                
+                <div class="categories-grid" id="categories-grid">
                     ${categories.map(category => {
                         const count = quotes.filter(q => q.category === category.id).length;
                         return `
-                            <div class="category-card" data-category="${category.id}">
+                            <div class="category-card" data-category="${category.id}" data-name="${category.name.toLowerCase()}">
                                 <div class="category-icon">
                                     <i class="${category.icon}"></i>
                                 </div>
@@ -1378,6 +1807,21 @@
                     }).join('')}
                 </div>
             `;
+
+            // Add search functionality
+            document.getElementById('category-search').addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const categoryCards = document.querySelectorAll('.category-card');
+                
+                categoryCards.forEach(card => {
+                    const categoryName = card.getAttribute('data-name');
+                    if (categoryName.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
 
             // Add event listeners for category cards
             document.querySelectorAll('.category-card').forEach(card => {
@@ -1395,7 +1839,10 @@
             
             if (categoryQuotes.length === 0) {
                 mainContent.innerHTML = `
-                    <h1 class="page-title">${category.name}</h1>
+                    <h1 class="page-title">
+                        <i class="${category.icon}"></i>
+                        ${category.name}
+                    </h1>
                     <div class="empty-state">
                         <div class="empty-icon">
                             <i class="far fa-folder-open"></i>
@@ -1414,7 +1861,10 @@
             }
             
             mainContent.innerHTML = `
-                <h1 class="page-title">${category.name}</h1>
+                <h1 class="page-title">
+                    <i class="${category.icon}"></i>
+                    ${category.name}
+                </h1>
                 
                 ${categoryQuotes.map((quote, index) => `
                     <div class="quote-card fade-in" style="animation-delay: ${index * 0.05}s">
@@ -1453,9 +1903,10 @@
                     const quote = quotes.find(q => q.id === quoteId);
                     if (quote) {
                         toggleFavorite(quote);
+                        updateFavoritesCount();
                         // Update the button state
-                        this.innerHTML = isFavorite(quote) 
-                            ? '<i class="fas fa-heart"></i> Favorited' 
+                        this.innerHTML = isFavorite(quote)
+                            ? '<i class="fas fa-heart"></i> Favorited'
                             : '<i class="far fa-heart"></i> Favorite';
                         this.classList.toggle('success', isFavorite(quote));
                         this.classList.toggle('accent', !isFavorite(quote));
@@ -1471,7 +1922,10 @@
             const authors = getAllAuthors();
             
             mainContent.innerHTML = `
-                <h1 class="page-title">Authors</h1>
+                <h1 class="page-title">
+                    <i class="fas fa-user-edit"></i>
+                    Authors
+                </h1>
                 
                 <div class="search-container">
                     <i class="fas fa-search search-icon"></i>
@@ -1481,9 +1935,15 @@
                 <div class="authors-list" id="authors-list">
                     ${authors.map(author => `
                         <div class="author-card" data-author="${author.name}">
-                            <div class="author-avatar">${author.name.charAt(0)}</div>
-                            <div class="author-name">${author.name}</div>
-                            <div class="author-quote-count">${author.count} quotes</div>
+                            <div class="author-avatar"
+                                 style="background-image: url('img/${author.name.replace(/\s+/g, '_')}.png')"
+                                 data-initials="${author.name.split(' ').map(n => n[0]).join('')}">
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">${author.name}</div>
+                                <div class="author-quote-count">${author.count} quotes</div>
+                            </div>
+                            <i class="fas fa-chevron-right author-chevron"></i>
                         </div>
                     `).join('')}
                 </div>
@@ -1519,7 +1979,10 @@
             
             if (authorQuotes.length === 0) {
                 mainContent.innerHTML = `
-                    <h1 class="page-title">${authorName}</h1>
+                    <h1 class="page-title">
+                        <i class="fas fa-user-edit"></i>
+                        ${authorName}
+                    </h1>
                     <div class="empty-state">
                         <div class="empty-icon">
                             <i class="fas fa-user-edit"></i>
@@ -1538,7 +2001,16 @@
             }
             
             mainContent.innerHTML = `
-                <h1 class="page-title">${authorName}</h1>
+                <div class="author-header" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div class="author-avatar"
+                         style="width: 70px; height: 70px; font-size: 1.5rem; background-image: url('img/${authorName.replace(/\s+/g, '_')}.png')"
+                         data-initials="${authorName.split(' ').map(n => n[0]).join('')}">
+                    </div>
+                    <div>
+                        <h1 class="page-title" style="margin-bottom: 0.2rem;">${authorName}</h1>
+                        <div style="color: var(--muted);">${authorQuotes.length} quotes</div>
+                    </div>
+                </div>
                 
                 ${authorQuotes.map((quote, index) => `
                     <div class="quote-card fade-in" style="animation-delay: ${index * 0.05}s">
@@ -1566,6 +2038,85 @@
             document.getElementById('back-to-authors').addEventListener('click', () => renderAuthorsPage());
         }
 
+        // Render Add Quote Page
+        function renderAddQuotePage() {
+            mainContent.innerHTML = `
+                <h1 class="page-title">
+                    <i class="fas fa-plus-circle"></i>
+                    Add New Quote
+                </h1>
+                
+                <div class="quote-editor">
+                    <div class="editor-group">
+                        <label class="editor-label">Quote Text</label>
+                        <textarea class="editor-textarea" id="quote-text" placeholder="Enter the quote text..."></textarea>
+                    </div>
+                    
+                    <div class="editor-group">
+                        <label class="editor-label">Author</label>
+                        <input type="text" class="editor-input" id="quote-author" placeholder="Enter author name...">
+                    </div>
+                    
+                    <div class="editor-group">
+                        <label class="editor-label">Category</label>
+                        <select class="editor-input" id="quote-category">
+                            ${categories.map(category => `
+                                <option value="${category.id}">${category.name}</option>
+                            `).join('')}
+                        </select>
+                    </div>
+                    
+                    <div class="editor-group">
+                        <label class="editor-label">Tags (comma separated)</label>
+                        <input type="text" class="editor-input" id="quote-tags" placeholder="motivation, success, life">
+                    </div>
+                    
+                    <div class="controls" style="margin-top: 1.5rem;">
+                        <button class="success" id="save-quote">
+                            <i class="fas fa-save"></i>
+                            Save Quote
+                        </button>
+                        <button class="secondary" id="cancel-quote">
+                            <i class="fas fa-times"></i>
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('save-quote').addEventListener('click', saveNewQuote);
+            document.getElementById('cancel-quote').addEventListener('click', goHome);
+        }
+
+        // Save new quote
+        function saveNewQuote() {
+            const text = document.getElementById('quote-text').value.trim();
+            const author = document.getElementById('quote-author').value.trim();
+            const category = document.getElementById('quote-category').value;
+            const tagsInput = document.getElementById('quote-tags').value.trim();
+            
+            if (!text || !author) {
+                alert('Please enter both quote text and author');
+                return;
+            }
+            
+            const tags = tagsInput ? tagsInput.split(',').map(tag => tag.trim()).filter(tag => tag) : [];
+            
+            const newQuote = {
+                id: quotes.length + 1,
+                text,
+                author,
+                tags,
+                category
+            };
+            
+            quotes.unshift(newQuote);
+            alert('Quote added successfully!');
+            currentPage = 'home';
+            renderPage(currentPage);
+            updateMenuActiveState();
+        }
+
         // Render About Page
         function renderAboutPage() {
             const totalQuotes = quotes.length;
@@ -1574,13 +2125,16 @@
             const totalTags = [...new Set(quotes.flatMap(q => q.tags))].length;
             
             mainContent.innerHTML = `
-                <h1 class="page-title">About Serenity</h1>
+                <h1 class="page-title">
+                    <i class="fas fa-info-circle"></i>
+                    About Serenity
+                </h1>
                 
                 <div class="about-card">
                     <div class="about-section">
                         <h3>App Information</h3>
                         <p>Serenity is a beautiful quotes app designed to inspire and motivate you every day.</p>
-                        <p>Version: <strong>Serenity v2.0.0</strong></p>
+                        <p>Version: <strong>Serenity Premium v2.5.0</strong> ${isPremium ? '<span class="premium-badge"><i class="fas fa-crown"></i> PREMIUM</span>' : ''}</p>
                         <p>Developed with <i class="fas fa-heart" style="color: var(--current-primary);"></i> by Adarsh Tiwari</p>
                     </div>
                     
@@ -1591,20 +2145,26 @@
                             <li><i class="fas fa-user-edit"></i> ${totalAuthors} Authors</li>
                             <li><i class="fas fa-tags"></i> ${totalCategories} Categories</li>
                             <li><i class="fas fa-tag"></i> ${totalTags} Tags</li>
+                            <li><i class="fas fa-heart"></i> ${favorites.length} Favorite Quotes</li>
                         </ul>
                     </div>
                     
                     <div class="about-section">
-                        <h3>Features</h3>
+                        <h3>Premium Features</h3>
                         <ul class="feature-list">
-                            <li><i class="fas fa-star"></i> Beautifully designed interface</li>
-                            <li><i class="fas fa-heart"></i> Save your favorite quotes</li>
-                            <li><i class="fas fa-palette"></i> Multiple themes and fonts</li>
-                            <li><i class="fas fa-moon"></i> Dark mode support</li>
-                            <li><i class="fas fa-search"></i> Search by author</li>
-                            <li><i class="fas fa-tags"></i> Browse by categories</li>
-                            <li><i class="fas fa-share-alt"></i> Share quotes with friends</li>
+                            <li><i class="fas fa-star"></i> 12 Beautiful Color Themes</li>
+                            <li><i class="fas fa-font"></i> 14 Font Family Options</li>
+                            <li><i class="fas fa-bell"></i> Daily Quote Notifications</li>
+                            <li><i class="fas fa-plus-circle"></i> Add Custom Quotes</li>
+                            <li><i class="fas fa-image"></i> Author Images Support</li>
                         </ul>
+                        
+                        ${!isPremium ? `
+                            <button class="accent" id="upgrade-button" style="margin-top: 1rem;">
+                                <i class="fas fa-crown"></i>
+                                Upgrade to Premium
+                            </button>
+                        ` : ''}
                     </div>
                     
                     <div class="about-section">
@@ -1621,12 +2181,23 @@
             document.getElementById('contact-button').addEventListener('click', () => {
                 alert('Thank you for your interest! You can contact us at serenity@example.com');
             });
+            
+            if (!isPremium) {
+                document.getElementById('upgrade-button').addEventListener('click', () => {
+                    isPremium = true;
+                    localStorage.setItem('isPremium', true);
+                    renderAboutPage();
+                });
+            }
         }
 
         // Render Settings Page
         function renderSettingsPage() {
             mainContent.innerHTML = `
-                <h1 class="page-title">Settings</h1>
+                <h1 class="page-title">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </h1>
                 
                 <div class="quote-card">
                     <div class="setting-group">
@@ -1664,6 +2235,14 @@
                             </div>
                             <div class="theme-option theme-10 ${currentTheme === 'theme-10' ? 'active' : ''}" data-theme="theme-10">
                                 <span class="theme-name">Sage</span>
+                            </div>
+                            <div class="theme-option theme-11 ${currentTheme === 'theme-11' ? 'active' : ''}" data-theme="theme-11" ${!isPremium ? 'title="Premium Theme"' : ''}>
+                                <span class="theme-name">Premium</span>
+                                ${!isPremium ? '<i class="fas fa-lock" style="position: absolute; top: 5px; right: 5px; font-size: 0.6rem;"></i>' : ''}
+                            </div>
+                            <div class="theme-option theme-12 ${currentTheme === 'theme-12' ? 'active' : ''}" data-theme="theme-12" ${!isPremium ? 'title="Premium Theme"' : ''}>
+                                <span class="theme-name">Sunset</span>
+                                ${!isPremium ? '<i class="fas fa-lock" style="position: absolute; top: 5px; right: 5px; font-size: 0.6rem;"></i>' : ''}
                             </div>
                         </div>
                     </div>
@@ -1736,6 +2315,31 @@
                             </label>
                         </div>
                     </div>
+                    
+                    <div class="setting-group">
+                        <h3 class="setting-title">
+                            <i class="fas fa-bell"></i>
+                            Daily Notification
+                        </h3>
+                        <div class="notification-toggle">
+                            <div class="notification-label">
+                                <i class="fas fa-quote-left"></i>
+                                <span>Daily Quote</span>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="daily-notification" ${dailyNotification ? 'checked' : ''}>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div id="notification-time-container" style="margin-top: 0.5rem; ${dailyNotification ? '' : 'display: none;'}">
+                            <select id="notification-time" style="width: 100%;">
+                                ${Array.from({length: 24}, (_, i) => {
+                                    const hour = i < 10 ? `0${i}` : i;
+                                    return `<option value="${hour}:00" ${localStorage.getItem('notificationTime') === `${hour}:00` ? 'selected' : ''}>${hour}:00</option>`;
+                                }).join('')}
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="quote-card" style="margin-top: 1.5rem;">
@@ -1748,12 +2352,16 @@
                             <i class="fas fa-trash"></i>
                             Clear Favorites
                         </button>
+                        <button class="warning" id="reset-settings" style="margin-top: 0.5rem;">
+                            <i class="fas fa-undo"></i>
+                            Reset All Settings
+                        </button>
                     </div>
                 </div>
                 
                 <div class="quote-card" style="margin-top: 1.5rem; text-align: center;">
                     <p style="color: var(--muted); font-size: 0.9rem;">
-                        Serenity Quotes v2.0.0<br>
+                        Serenity Quotes Premium v2.5.0<br>
                         &copy; ${new Date().getFullYear()} All Rights Reserved
                     </p>
                 </div>
@@ -1762,6 +2370,12 @@
             // Add event listeners for settings
             document.querySelectorAll('.theme-option').forEach(option => {
                 option.addEventListener('click', function() {
+                    if (this.classList.contains('theme-11') || this.classList.contains('theme-12')) {
+                        if (!isPremium) {
+                            alert('Premium themes are available in the premium version!');
+                            return;
+                        }
+                    }
                     currentTheme = this.getAttribute('data-theme');
                     localStorage.setItem('theme', currentTheme);
                     applyTheme();
@@ -1808,13 +2422,40 @@
                 applyDarkMode();
             });
 
+            document.getElementById('daily-notification').addEventListener('change', function() {
+                dailyNotification = this.checked;
+                localStorage.setItem('dailyNotification', dailyNotification);
+                
+                const timeContainer = document.getElementById('notification-time-container');
+                if (dailyNotification) {
+                    timeContainer.style.display = 'block';
+                    requestNotificationPermission();
+                    checkForDailyNotification();
+                } else {
+                    timeContainer.style.display = 'none';
+                }
+            });
+
+            document.getElementById('notification-time').addEventListener('change', function() {
+                localStorage.setItem('notificationTime', this.value);
+                checkForDailyNotification();
+            });
+
             document.getElementById('clear-favorites').addEventListener('click', function() {
                 if (confirm('Are you sure you want to clear all your favorites?')) {
                     favorites = [];
                     localStorage.setItem('favorites', JSON.stringify(favorites));
+                    updateFavoritesCount();
                     if (currentPage === 'favorites') {
                         renderFavoritesPage();
                     }
+                }
+            });
+
+            document.getElementById('reset-settings').addEventListener('click', function() {
+                if (confirm('Are you sure you want to reset all settings to default?')) {
+                    localStorage.clear();
+                    location.reload();
                 }
             });
         }
@@ -1865,7 +2506,7 @@
 
         // Toggle Favorite
         function toggleFavorite(quote) {
-            const index = favorites.findIndex(fav => 
+            const index = favorites.findIndex(fav =>
                 fav.text === quote.text && fav.author === quote.author
             );
             
@@ -1881,8 +2522,8 @@
             if (favoriteBtn) {
                 const isFavorite = index === -1;
                 
-                favoriteBtn.innerHTML = isFavorite 
-                    ? '<i class="fas fa-heart"></i> Favorited' 
+                favoriteBtn.innerHTML = isFavorite
+                    ? '<i class="fas fa-heart"></i> Favorited'
                     : '<i class="far fa-heart"></i> Favorite';
                     
                 favoriteBtn.classList.toggle('success', isFavorite);
@@ -1995,6 +2636,22 @@
                     bg: 'var(--theme-10-bg)',
                     card: 'var(--theme-10-card)',
                     text: 'var(--theme-10-text)'
+                },
+                'theme-11': {
+                    primary: 'var(--theme-11-primary)',
+                    secondary: 'var(--theme-11-secondary)',
+                    accent: 'var(--theme-11-accent)',
+                    bg: 'var(--theme-11-bg)',
+                    card: 'var(--theme-11-card)',
+                    text: 'var(--theme-11-text)'
+                },
+                'theme-12': {
+                    primary: 'var(--theme-12-primary)',
+                    secondary: 'var(--theme-12-secondary)',
+                    accent: 'var(--theme-12-accent)',
+                    bg: 'var(--theme-12-bg)',
+                    card: 'var(--theme-12-card)',
+                    text: 'var(--theme-12-text)'
                 }
             };
 
